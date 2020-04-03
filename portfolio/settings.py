@@ -25,7 +25,7 @@ SECRET_KEY = '__6j6(0ft-7hcx8!b4$=r1pm%p4#a9%m!waxix4k!0y=x%*^hk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,11 +81,19 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfoliodb',
         'USER': 'postgres',
-        'PASSWORD':'django12345',
+        'PASSWORD':'newPassword',
         'HOST': 'localhost',
         'PORT':'5432'
     }
 }
+
+EMAIL_USE_TLS = True  
+EMAIL_HOST = 'smtp.gmail.com'  
+EMAIL_PORT = 587  
+EMAIL_HOST_USER = 'smalik1231990@gmail.com'  
+EMAIL_HOST_PASSWORD = 'Smalik@786'  
+
+
 
 
 # Password validation
@@ -123,8 +131,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'portfolio/static')
 
+]
+
+
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
+
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 

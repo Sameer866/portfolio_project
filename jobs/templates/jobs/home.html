@@ -1,6 +1,7 @@
 
     <!doctype html>
     <html lang="en">
+      {% load staticfiles%}
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,14 +40,14 @@
       <body>
         <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="{% url 'home' %}">Manavver</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Python@mania</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a>
-          <a class="nav-item nav-link" href="#">Resume</a>
+          <a class="nav-item nav-link" href="{% static 'resume.docx' %}">Resume</a>
           <a class="nav-item nav-link" href="{% url 'allblogs'%}">Blog</a>
 
         </div>
@@ -58,11 +59,13 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Hi! I am Manavver </h1>
-          <p class="lead text-muted">Welcome to my portfolio website</p>
+          <h1 class="jumbotron-heading">Hi, Geeks . I’m Master in Computer Application(MCA) and i am passionate about programming and technology </h1>
+          <p class="lead text-muted">Welcome to my Python@mania website,Python@mania is the place where I nerd out about computer programming. On this blog, I share all the things I learn about programming as I go.</p>
           <p>
-            <a href="mailto:manavversaif1990@gmail.com" class="btn btn-primary my-2">Email Me</a>
-            <p>
+            <a href="{% url 'mail'%}" class="btn btn-primary my-2">Email Me</a>
+          </p>
+          <img src="{% static 'my_image.png'%}" height=250/>
+
         </div>
       </section>
 
@@ -91,7 +94,7 @@
     <footer class="text-muted">
       <div class="container text-center">
           &copy; Manavver , {% now "y"%}
-
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
           <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
